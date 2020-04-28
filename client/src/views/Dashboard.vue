@@ -133,9 +133,10 @@ export default {
       }
     },
     fetchData: function(){
-      axios.get(`${that.apiUrl}/app`, { headers: { Authorization: window.localStorage.getItem('cognitoIdentityToken') } })
+      axios.get(`${this.apiUrl}/app`, { headers: { Authorization: window.localStorage.getItem('cognitoIdentityToken') } })
         .then(response => (this.$store.commit('hydrateLinks', response.data)))
         .catch(() => (this.$store.commit('drainLinks')))
+        console.log(this.apiUrl)
     },
     createLink: function() {
       let that = this;
