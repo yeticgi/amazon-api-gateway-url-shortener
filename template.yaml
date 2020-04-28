@@ -85,7 +85,7 @@ Resources:
       AttributeDefinitions:
         - AttributeName: id
           AttributeType: S
-        - AttributeName: owner
+        - AttributeName: url
           AttributeType: S
       GlobalSecondaryIndexes:
         - IndexName: OwnerIndex
